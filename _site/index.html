@@ -19,20 +19,21 @@
             <div class="col-md-6 offset-md-3">
                 <h1 class="display-4 text-center mb-3">Weight Converter</h1>
                 <form>
-                    <div class="form-group form-inline justify-content-center">
-                        <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Pounds...">                    
-                        <button class="btn btn-danger dropdown-toggle form-control form-control-lg" type="number" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Choose Type
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="index.html">Pounds</a>
-                            <a class="dropdown-item" href="kg.html">Kilograms</a>
-                            <a class="dropdown-item" href="oz.html">Ounces</a>
-                        </div>
+                    <div class="form-group">
+                        <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Pounds...">
                     </div>
                 </form>
-                
+                <div class="dropdown form-group inline">
+                    <button class="btn btn-danger dropdown-toggle form-control form-control-lg" type="number" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose Converter
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="index.html">Pounds</a>
+                        <a class="dropdown-item" href="kg.html">Kilograms</a>
+                        <a class="dropdown-item" href="oz.html">Ounces</a>
+                    </div>
+                </div>
                 <div id="output">
 
                     <div class="card bg-success mb-2">

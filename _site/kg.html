@@ -19,26 +19,28 @@
             <div class="col-md-6 offset-md-3">
                 <h1 class="display-4 text-center mb-3">Weight Converter</h1>
                 <form>
-                    <div class="form-group form-inline justify-content-center">
-                        <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Pounds...">                    
-                        <button class="btn btn-danger dropdown-toggle form-control form-control-lg" type="number" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Choose Type
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="index.html">Pounds</a>
-                            <a class="dropdown-item" href="kg.html">Kilograms</a>
-                            <a class="dropdown-item" href="oz.html">Ounces</a>
-                        </div>
+                    <div class="form-group">
+                        <input id="kgInput" type="number" class="form-control form-control-lg" placeholder="Enter Kilograms...">
                     </div>
                 </form>
-                
+                <div class="dropdown form-group inline ">
+                    <button class="btn btn-danger dropdown-toggle form-control form-control-lg" type="number" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose Converter
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="index.html">Pounds</a>
+                        <a class="dropdown-item" href="kg.html">Kilograms</a>
+                        <a class="dropdown-item" href="oz.html">Ounces</a>
+                    </div>
+                </div>
+
                 <div id="output">
 
                     <div class="card bg-success mb-2">
                         <div class="card-block">
-                            <h4>Kilograms:</h4>
-                            <div id="kgOutput"></div>
+                            <h4>Pounds:</h4>
+                            <div id="lbsOutput"></div>
                         </div>
                     </div>
 
@@ -57,13 +59,12 @@
     <script>
         document.getElementById('output').style.visibility = 'hidden';
 
-        document.getElementById("lbsInput").addEventListener('input', function (e) {
+        document.getElementById("kgInput").addEventListener('input', function (e) {
             document.getElementById('output').style.visibility = 'visible';
-            let lbs = e.target.value;
-            document.getElementById('kgOutput').innerHTML = (lbs / 2.2046).toFixed(2);
-            document.getElementById('ozOutput').innerHTML = (lbs * 16).toFixed(0);
-        });
-
+            let kg = e.target.value;
+            document.getElementById('lbsOutput').innerHTML = (kg * 2.20462).toFixed(2);
+            document.getElementById('ozOutput').innerHTML = (kg * 35.274).toFixed(0);
+        });            
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
